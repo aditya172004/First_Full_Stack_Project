@@ -1,0 +1,58 @@
+<%layout("/layouts/boilerplate.ejs")%>
+<body>
+    <br>
+    <h3>Create a new Listing</h3>
+    <div class="row">
+        <div class="col-8 offset-1">
+    <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div>
+        <label for="listing[title]" class="form-label"><b>Title</b></label>
+        <input name="listing[title]" placeholder="enter title" type="text" class="form-control" required>
+        <div class="valid-feedback">Title looks good</div>
+        <div class="invalid-feedback">Enter a Catchy Title</div>
+        </div>
+        <br>
+        <div>
+        <label for="description" class="form-label"><b>Description</b></label>
+        <textarea name="listing[description]" placeholder="description" rows="5" cols="25" class="form-control" required></textarea>
+        <div class="valid-feedback">Description looks good</div>
+        </div>
+        <br>
+        <div>
+            <label for="image" class="form-label"><b>Upload Listing Image</b></label>
+            <input name="listing[image]" type="file" class="form-control" required>
+        </div>
+        <br>
+        <div>
+            <label for="price" class="form-label"><b>Price</b></label>
+        <input name="listing[price]" placeholder="enter price" type="number" class="form-control" required>
+        <div class="valid-feedback">price looks good</div>
+        <div class="invalid-feedback">Enter a valid price</div>
+        </div>
+        
+        <br>
+        <div>
+            <label for="country" class="form-label"><b>Country name</b></label>
+        <input type="text" name="listing[country]" placeholder="enter country" class="form-control" required>
+        <div class="invalid-feedback">Enter valid country name</div>
+        </div>
+        <br>
+        <br>
+        <div>
+            <label for="location" class="form-label"><b>Location</b></label>   
+            <input name="listing[location]" placeholder="enter location" type="text" class="form-control" required>
+            <div class="invalid-feedback">Enter a valid location</div>
+        </div>
+        <br>
+        <div>
+            <label for="map_src" class="form-label"><b>Google Maps iframe source Link</b></label>   
+            <input name="listing[map_src]" placeholder="enter iframe source link from google maps" type="text" class="form-control" >
+            <div class="invalid-feedback">Enter a valid link</div>
+        </div>
+        <br>
+        <button class="btn btn-dark add-btn"><b>Add</b></button>
+        <br><br><br>
+    </form>
+    </div>
+</div>
+</body>
