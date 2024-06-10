@@ -119,6 +119,10 @@ app.use((req,res,next) => {
 //     res.send(registeredUser);
 // })
 
+app.get("/",async(req,res) => {
+    res.redirect("/listings");
+})
+
 /* Below is the most important thing to do in routing*/
 // <--------------------IMPPPPPPPP-------------------->
 app.use("/listings",listingRouter);
